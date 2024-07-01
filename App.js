@@ -1,5 +1,6 @@
 import { StyleSheet, Text, View, Image, ScrollView }from 'react-native';
 import React from 'react';
+import ButtonComponent from './component/button/button';
 
 const App = () => {
  return (
@@ -23,7 +24,7 @@ const App = () => {
     />
       <ScrollView contentContainerStyle={{
         flexGrow: 1,
-        justifyContent: 'head',
+        justifyContent: 'center',
         alignItems: 'center',
         padding: 20,
       }}>
@@ -31,8 +32,8 @@ const App = () => {
         source={require('./assets/line.png')}
         style={{
           width: 150,
-          height: 150,
-          marginTop: 50,
+          height: 112,
+          marginTop: 20,
           opacity: 1,
           zIndex: 1,
         }}
@@ -45,63 +46,37 @@ const App = () => {
           color: 'white',
           position: 'center',
           top: 0,
-          marginTop: 300,
-        }}>Selamat Datang di LINE</Text>
+          marginTop: 325,
+        }}>Welcome To Line</Text>
 
         <Text style={{
           color: 'white',
           fontSize: 18,
-          textAlign: 'bottom',
-          marginTop: 30,
-        }}>Gunakan LINE dan cari temanmu hingga ke seluruh dunia </Text>
+          textAlign: 'absolute',
+          border: 'solid',
+          marginTop: 20,
+        }}>Communication applications that connect one person to another are equipped with various services that make life easier every day. </Text>
           
           <Text style={{
             color: 'white',
             fontSize: 18,
-            textAlign: 'center',
+            textAlign: 'div',
             marginTop: 20,
-          }}></Text>
+          }}>Free application that makes it possible to send text messages, voice messages, voice calls, send pictures, videos and so on, if we are connected to the internet.</Text>
            
            <View style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
             marginTop: 20,
             marginBottom: 40,
            }}>
-            <View style={{ marginHorizontal: 10 }}>
-              <Text style={{
-                width: 100,
-                height: 50,
-                color: 'white',
-                backgroundColor: 'green',
-                textAlign: 'center',
-                lineHeight: 50,
-                fontSize: 20,
-                borderRadius: 10,
-                marginTop: 80,
-              }}>Daftar</Text>
-              </View>
-              <View style={{ marginHorizontal: 20}}>
-                <Text style={{
-                  width: 100,
-                  height: 50,
-                  color: 'white',
-                  backgroundColor: 'green',
-                  textAlign: 'center',
-                  lineHeight: 50,
-                  fontSize: 20,
-                  borderRadius: 10,
-                  marginTop: 80,
-                }}>Login</Text>
-                </View>
+                <ButtonComponent title="Sign In" color="green"/>
+                <ButtonComponent title="Sign Up" color="green"/>
                 </View>
                 </ScrollView>
                 </View>
                 );
               }
 
-                export default App;
-
-
-    
+export default App;
