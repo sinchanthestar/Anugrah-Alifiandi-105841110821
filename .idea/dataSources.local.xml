@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="PY-241.17890.14">
+    <data-source name="Databricks" uuid="b66a8f64-7bde-4436-aa3c-253463806345">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SPARK" />
+      <secret-storage>master_key</secret-storage>
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping />
+    </data-source>
+    <data-source name="MySQL" uuid="c6b901fb-abf1-4daa-a786-11168cd5d5d1">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>admin</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="Redis" uuid="c1bc6a7d-700f-4bab-a97a-352fb976b06a">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="REDIS" />
+      <secret-storage>master_key</secret-storage>
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping />
+    </data-source>
+    <data-source name="Google Cloud Spanner" uuid="1695443b-4412-44e4-bf5a-184be47b01d4">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="CLOUD_SPANNER" />
+      <secret-storage>master_key</secret-storage>
+      <auth-provider>cloud-spanner-credentials-file</auth-provider>
+      <schema-mapping />
+    </data-source>
+    <data-source name="MySQL [2]" uuid="6e8907a7-835a-4d37-98b2-12a31c980107">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>admin</user-name>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>
