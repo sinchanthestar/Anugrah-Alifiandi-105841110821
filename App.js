@@ -1,21 +1,35 @@
-import { useFonts} from 'expo-font';
-import { Text, View } from 'react-native';//usefonts
-export default function App() {
-  const [dapatFont] = useFonts({
-    'MetroBlack' : require('./assets/fonts/Metropolis-Black.otf'),
-    'MetroBold' : require('./assets/fonts/Metropolis-Bold.otf'),
-    'MetroLight' : require('./assets/fonts/Metropolis-Light.otf'),
-    'MetroMedium' : require('./assets/fonts/Metropolis-Medium.otf'),
-    'MetroSemiBold' : require('./assets/fonts/Metropolis-SemiBold.otf'),
-  });
-  if(!dapatFont) return <Text>Font Tidak ditemukan ...</Text>
+// In App.js in a new project
+
+import * as React from "react";
+import { View, Text } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import LoginPages from "./component/button/button.js";
+import { Button } from "react-native-web";
+import ForgetPassword from "./component/button/forget.js";
+function HomeScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text style={{ fontFamily: 'MetroBlack'}}>Font Metro Black</Text>
-      <Text style={{ fontFamily: 'MetroBold'}}>Font Metro Bold</Text>
-      <Text style={{ fontFamily: 'MetroLight'}}>Font Metro Light</Text>
-      <Text style={{ fontFamily: 'MetroMedium'}}>Font Metro Medium</Text>
-      <Text style={{ fontFamily: 'MetroSemiBold'}}>Font Metro SemiBold</Text>
+    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+      <Text>Home Screen</Text>
+      <Button tittle="Login" onPress={() => navigation.navigate("Login")} />
+      <Button
+        tittle="Forget Password"
+        onPress={() => navigation.navigate("ForgetPassword")}
+      />
     </View>
   );
 }
+const Stack = createNativeStackNavigator();
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Login" component={LoginPages} />
+        <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
